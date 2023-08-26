@@ -4,7 +4,7 @@
 
 PhoneBook::PhoneBook()
 {
-    this->index = 1;
+    this->index = 0;
 }
 
 void PhoneBook::add()
@@ -35,26 +35,30 @@ void PhoneBook::add()
     this->contacts[i].setNumber(number);
     this->contacts[i].setSecret(secret);
     i++;
-    if (this->index < 9)
+    if (this->index < 8)
         this->index++;
+    std::cout << "Person has been added!" << std::endl;
 }
 
 void PhoneBook::search()
 {
     int willSearch;
+    PhoneBook tmp;
+
+    tmp = *this;
+    formatter(&tmp);
+    print_phonebook(&tmp);
 
     std::cout << "Enter row that you want to search... ";
     std::cin >> willSearch;
-
-    if (willSearch > this->index)
+    if (willSearch > this->index - 1 || willSearch < 0)
     {
         std::cout << "There is no row with that number!" << std::endl;
         return ;
     }
-
-    std::cout << this->contacts[willSearch - 1].getName() << std::endl;
-    std::cout << this->contacts[willSearch - 1].getSurname() << std::endl;
-    std::cout << this->contacts[willSearch - 1].getNickname() << std::endl; //! BİTMEDİ, STRİNG FORMATLAMA İŞLEMİ YAPILACAK!
-    std::cout << this->contacts[willSearch - 1].getNumber() << std::endl;
-    std::cout << this->contacts[willSearch - 1].getSecret() << std::endl;
+    std::cout << this->contacts[willSearch].getName() << std::endl;
+    std::cout << this->contacts[willSearch].getSurname() << std::endl;
+    std::cout << this->contacts[willSearch].getNickname() << std::endl;
+    std::cout << this->contacts[willSearch].getNumber() << std::endl;
+    std::cout << this->contacts[willSearch].getSecret() << std::endl; 
 }

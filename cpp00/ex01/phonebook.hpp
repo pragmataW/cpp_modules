@@ -13,4 +13,6 @@ class PhoneBook
         void add();
         void search();
 };
+void formatter(PhoneBook *phonebook);
+void print_phonebook(PhoneBook *phonebook);
 #endif
