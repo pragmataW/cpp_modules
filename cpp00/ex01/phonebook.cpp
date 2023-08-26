@@ -10,24 +10,21 @@ PhoneBook::PhoneBook()
 void PhoneBook::add()
 {
     static int i;
-    std::string name;
-    std::string surname;
-    std::string nickname;
-    std::string number;
-    std::string secret;
+    std::string name,surname, nickname, number, secret;
 
     if (i == 8)
         i = 0;
+    std::cout << std::flush;
     std::cout << "Enter Name: ";
-    std::cin >> name;
+    getline(std::cin, name, '\n');
     std::cout << "Enter Surname ";
-    std::cin >> surname; 
+    getline(std::cin, surname); 
     std::cout << "Enter Nickname ";
-    std::cin >> nickname;
+    getline(std::cin, nickname);
     std::cout << "Enter Number ";
-    std::cin >> number;
+    getline(std::cin, number);
     std::cout << "Enter Darkest Secret ";
-    std::cin >> secret;
+    getline(std::cin, secret);
 
     this->contacts[i].setName(name);
     this->contacts[i].setSurname(surname);
@@ -43,6 +40,7 @@ void PhoneBook::add()
 void PhoneBook::search()
 {
     int willSearch;
+    std::string strWillSearch;
     PhoneBook tmp;
 
     tmp = *this;
@@ -50,7 +48,8 @@ void PhoneBook::search()
     print_phonebook(&tmp);
 
     std::cout << "Enter row that you want to search... ";
-    std::cin >> willSearch;
+    getline(std::cin, strWillSearch);
+    willSearch = std::stoi(strWillSearch);
     if (willSearch > this->index - 1 || willSearch < 0)
     {
         std::cout << "There is no row with that number!" << std::endl;
