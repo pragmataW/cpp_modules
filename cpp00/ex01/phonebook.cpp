@@ -14,17 +14,50 @@ void PhoneBook::add()
 
     if (i == 8)
         i = 0;
-    std::cout << std::flush;
     std::cout << "Enter Name: ";
     getline(std::cin, name, '\n');
+    while (name.length() == 0)
+    {
+        std::cout << "You have to fill contact info!" << std::endl;
+        std::cout << "Enter Name: ";
+        getline(std::cin, name, '\n');
+    }
+
     std::cout << "Enter Surname ";
     getline(std::cin, surname); 
+    while (surname.length() == 0)
+    {
+        std::cout << "You have to fill contact info!" << std::endl;
+        std::cout << "Enter Surname ";
+        getline(std::cin, surname, '\n');
+    }
+
     std::cout << "Enter Nickname ";
     getline(std::cin, nickname);
+    while (nickname.length() == 0)
+    {
+        std::cout << "You have to fill contact info!" << std::endl;
+        std::cout << "Enter Nickname ";
+        getline(std::cin, nickname, '\n');
+    }
+
     std::cout << "Enter Number ";
     getline(std::cin, number);
+    while (number.length() == 0)
+    {
+        std::cout << "You have to fill contact info!" << std::endl;
+        std::cout << "Enter Number ";
+        getline(std::cin, number, '\n');
+    }
+
     std::cout << "Enter Darkest Secret ";
     getline(std::cin, secret);
+    while (secret.length() == 0)
+    {
+        std::cout << "You have to fill contact info!" << std::endl;
+        std::cout << "Enter Darkest Secret ";
+        getline(std::cin, secret, '\n');
+    }
 
     this->contacts[i].setName(name);
     this->contacts[i].setSurname(surname);
