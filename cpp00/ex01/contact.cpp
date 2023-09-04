@@ -65,3 +65,4 @@ void Contacts::setSecret(std::string secret)
 {
     this->secret = secret;
 }
+

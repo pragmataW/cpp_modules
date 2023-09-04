@@ -94,3 +94,4 @@ void PhoneBook::search()
     std::cout << this->contacts[willSearch].getNumber() << std::endl;
     std::cout << this->contacts[willSearch].getSecret() << std::endl; 
 }
+
