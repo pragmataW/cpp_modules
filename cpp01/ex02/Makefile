@@ -1,5 +1,5 @@
 all: 
-	c++ -o Brain main.cpp
+	c++ -o Brain -Wall -Wextra -Werror main.cpp
 
 fclean:
 	rm -rf Brain

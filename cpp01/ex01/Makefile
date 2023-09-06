@@ -1,5 +1,5 @@
 all:
-	c++ -o Zombie main.cpp Zombie.cpp zombieHorde.cpp
+	c++ -o Zombie -Wall -Wextra -Werror main.cpp Zombie.cpp zombieHorde.cpp
 
 fclean:
 	rm -rf Zombie
