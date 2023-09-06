@@ -11,7 +11,7 @@ void replace(std::string inputString, std::string s1, std::string s2, std::strin
         inputString.insert(index, s2);
         index = inputString.find(s1);
     }
-    outputFile << inputString << std::endl;
+    outputFile << inputString;
 }
 
 int main(int argc, char *argv[])
