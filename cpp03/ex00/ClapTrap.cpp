@@ -13,14 +13,14 @@ ClapTrap::ClapTrap(std::string name)
 //!copy constructor
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-    std::cout << "Copy Constructor Called!" << std::endl;
+    std::cout << "ClapTrap Copy Constructor Called!" << std::endl;
     *this = copy;
 }
 
 //!destructor
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor Called!" << std::endl;
+    std::cout << "ClapTrap Destructor Called!" << std::endl;
 }
 
 //!Operator overload =
