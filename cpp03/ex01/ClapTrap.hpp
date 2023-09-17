@@ -11,7 +11,6 @@ class ClapTrap
         int damage;
     public:
         //!constructor
-        //ClapTrap();
         ClapTrap(std::string name);
         //!copy constructor
         ClapTrap(const ClapTrap &copy);

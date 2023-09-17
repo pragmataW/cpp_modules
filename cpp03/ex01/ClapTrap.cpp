@@ -1,11 +1,6 @@
 #include "ClapTrap.hpp"
 
 //!constructor
-// ClapTrap::ClapTrap()
-// {
-
-// }
-
 ClapTrap::ClapTrap(std::string name)
 {
     std::cout << "ClapTrap Constructor Called!" << std::endl;
